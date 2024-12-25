@@ -1,0 +1,50 @@
+1:Update/Refresh OS
+
+ apt-get update -y
+
+2:Install Java package OpenJDK 11 
+
+ apt install openjdk-11-jre -y
+
+3:Download Maven repo from internet
+
+ wget https://downloads.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
+
+ls -ltra
+
+4:Untar package
+
+ tar -xvzf apache-maven-3.9.6-bin.tar.gz
+
+5:Go to maven repo Directory path
+
+ cd /apache-maven-3.9.6
+
+6:Install maven package
+
+ apt install maven -y
+
+7:Generate maven template 
+
+ mvn archetype:generate
+
+choose a number : enter the number on screen
+choose a value : enter the number on screen
+choose groupid : team
+choose artifactid : devops
+snapshot : enter
+next field : enter
+finally press Y and enter
+
+cd /devops
+
+ls -la
+
+mvn compile
+
+ls -la
+
+mvn test
+mvn package
+mvn install
+mvn clean
